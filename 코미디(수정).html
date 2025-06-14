@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>여행지 소개</title>
+  <style>
+    @font-face {
+      font-family: 'Pretendard-Regular';
+      src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+    body {
+      font-family: 'Pretendard-Regular', sans-serif;
+      margin: 0;
+      background-color: #f3f0f9;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background-color: #7e57c2;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+      .iframe-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding-top:100px;
+    }
+    #commedy-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 24px;
+  background-color: #9575cd;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#commedy-button:hover {
+  background-color: #7e57c2;
+  transform: scale(1.05);
+}
+
+    iframe {
+      width: 300px;
+      height: 700px;
+      border: 2px solid #b39ddb;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    footer {
+      background-color: #7e57c2;
+      color: white;
+      padding: 10px;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      #유럽 {
+        left: 55%;
+        top: 34%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>좋아하는 코미디 프로그램을 소개합니다.</h1>
+    
+
+  </header>
+  <a href="form.html">
+  <div id="commedy-button" class="button">설문조사</div>
+ </a>
+
+        
+    <div class="iframe-list">
+      <iframe src="오피스.webp" title="ecards"></iframe>
+      <iframe src="베콜사.webp" title="a.html"></iframe>
+      <iframe src="사인펠드.webp" title="office"></iframe>
+      <iframe src="모던타임즈.webp" title="b.html"></iframe>
+    </div>
+
+
+
+  <footer>
+    © 2025 여행지 소개
+  </footer>
+
+</body>
+</html>

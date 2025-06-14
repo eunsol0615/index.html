@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>관심 이슈</title>
+  <style>
+    @font-face {
+      font-family: 'Pretendard-Regular';
+      src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Pretendard-Regular';
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+     
+      margin-bottom: 30px;
+
+    }
+
+    .issue-box {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #ede7f6;
+      border: 1px solid #b39ddb;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .issue-box img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .issue-content {
+      flex: 1;
+    }
+
+    .comment-section {
+      max-width: 960px;
+      margin: 0 auto 40px;
+      padding: 20px;
+      background-color: white;
+      border-top: 2px solid #b39ddb;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .comment-section h3 {
+      color: #7e57c2;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+      font-family: 'Pretendard-Regular';
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #9575cd;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #7e57c2;
+    }
+
+    #commentList {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    #commentList li {
+      background-color: #f3f0f9;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      border-left: 4px solid #b39ddb;
+    }
+
+    @media (max-width: 600px) {
+      .issue-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .issue-box img {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2><img src="이슈.png" alt="이슈 아이콘" style="vertical-align: middle; width: 30px; height: 30px;"> 관심 이슈</h2>
+
+    <div class="issue-box">
+      <img src="재생.jpg" alt="이슈 이미지1" />
+      <div class="issue-content">
+        <p>재생 에너지의 불확실성과 저장의 비효율성, 그리고 전력 수요</p>
+      </div>
+    </div>
+
+    <div class="issue-box">
+      <img src="정신.jpg" alt="이슈 이미지2" />
+      <div class="issue-content">
+        <p>한국의 높은 자살률을 어떻게 해결할 것인가?</p>
+      </div>
+    </div>
+    <div class="issue-box">
+      <img src="트랙터.jpg" alt="이슈 이미지2" />
+      <div class="issue-content">
+        <p>자율주행 트랙터와 농업 첨단 시스템</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="comment-section">
+    <h3>댓글을 작성해보세요</h3>
+    <textarea id="commentInput" placeholder="댓글을 입력하세요..."></textarea><br>
+    <button onclick="addComment()">댓글 등록</button>
+    <ul id="commentList"></ul>
+  </div>
+
+  <script>
+    function addComment() {
+      const input = document.getElementById("commentInput");
+      const list = document.getElementById("commentList");
+      const text = input.value.trim();
+
+      if (text !== "") {
+        const li = document.createElement("li");
+        li.textContent = text;
+        list.appendChild(li);
+        input.value = "";
+      } else {
+        alert("댓글을 입력해주세요!");
+      }
+    }
+  </script>
+
+</body>
+</html>

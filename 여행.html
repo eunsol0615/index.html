@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>여행지 소개</title>
+  <style>
+    @font-face {
+      font-family: 'Pretendard-Regular';
+      src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+    body {
+      font-family: 'Pretendard-Regular', sans-serif;
+      margin: 0;
+      background-color: #f3f0f9;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background-color: #7e57c2;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+    .map-container {
+      position: relative;
+      max-width: 100%;
+      margin: 20px auto;
+    }
+    .map-container img {
+      width: 100%;
+      height: auto;
+      max-width: 1200px;
+    }
+    #유럽 {
+      position: absolute;
+      left: 55%;
+      top: 32%;
+      transform: translate(-50%, -50%);
+      color: purple;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #7e57c2;
+      color: white;
+      padding: 10px;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      #유럽 {
+        left: 55%;
+        top: 34%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>가고 싶은 여행지를 소개합니다</h1>
+  </header>
+
+
+
+  <div class="map-container">
+    <img src="지도.png" alt="지도" usemap="#workmap">
+    <map name="workmap">
+      <area shape="rect" coords="450,450,700,150" alt="유럽" href="산티아고.jpg">
+      <area shape="rect" coords="100,450,350,150" alt="미국" href="앨버커키.jpg">
+    </map>
+    <a href="산티아고.html"><p id="유럽">유럽</p></a>
+  </div>
+
+  <footer>
+    © 2025 여행지 소개
+  </footer>
+
+</body>
+</html>

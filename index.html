@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>보라 테마 웹사이트 - 소개</title>
+  <style>
+    @font-face {
+      font-family: 'Pretendard-Regular';
+      src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'KOTRA_BOLD-Bold';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Pretendard-Regular';
+      background-color: #f3f0f9;
+      color: #333;
+    }
+
+    header {
+      background-color: rgb(158, 124, 216);
+      color: white;
+      padding: 15px 30px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    #logo {
+      font-family: 'KOTRA_BOLD-Bold';
+      font-size: 1.6rem;
+      background: linear-gradient(90deg, rgb(250, 218, 241), rgb(209, 197, 236));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #logo-tag {
+      text-decoration: none;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: rgb(208, 185, 232);
+      font-size: 120%;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .search-box input {
+      padding: 6px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    .search-box button {
+      padding: 6px 10px;
+      background-color: #9575cd;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .search-box button:hover {
+      background-color: #7e57c2;
+    }
+
+    .main-image-wrapper {
+      margin:100px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-image {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .main-image:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background-color: #9575cd;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .contact-button:hover {
+      transform: scale(1.05);
+    }
+
+    .container {
+  max-width: 960px;
+  margin: 120px auto; /* 위 아래 + 좌우 가운데 정렬 */
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-top: 100px;
+  text-align: center; /* 가운데 정렬 */
+}
+
+
+    .info-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 12px;
+      background-color: #f9f5ff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .info-table td {
+      background-color: #e8def8;
+      padding: 20px;
+      font-size: 1rem;
+      border-radius: 10px;
+      vertical-align: middle;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .photo-cell {
+      width: 220px;
+      text-align: center;
+      background-color: #d8cdee;
+    }
+
+    .photo-cell img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .name-cell, .id-cell, .univ-cell {
+      font-weight: bold;
+      color: #5e35b1;
+    }
+
+    .intro-cell {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .intro-cell video {
+      margin-top: 15px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      background-color: rgb(158, 124, 216);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    }
+   
+
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .info-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .info-table tr {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a id="logo-tag" href="index.html">
+      <div id="logo">김은솔 EUNSOL KIM</div>
+    </a>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="검색어를 입력하세요" />
+      <button type="button" onclick="search()">🔍</button>
+    </div>
+    <nav>
+      <a href="index.html">홈</a>
+      <a href="취미.html">취미</a>
+      <a href="추천도서.html">추천도서</a>
+      <a href="관심이슈.html">관심이슈</a>
+      <a href="이동.html">이동경로</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="main-image-wrapper">
+  <img id="mainImage" src="학교구름.jpg" alt="메인 이미지" class="main-image">
+  <button class="contact-button" onclick="nextImage()">다음 이미지</button>
+</div>
+ <h2>안녕하세요, 반갑습니다.</h2>
+<div class="container">
+  
+  <table class="info-table">
+    <tbody>
+      <tr>
+        <td rowspan="2" class="photo-cell">
+          <img src="내사진.jpg" alt="프로필 사진">
+        </td>
+        <td class="name-cell">김은솔</td>
+        <td class="id-cell">22500152</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="univ-cell">
+          <a href="https://www.handong.edu/">한동대학교</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="intro-cell">
+          안녕하세요 저는 한동대학교 글로벌리더십학부 새내기 김은솔입니다.<br><br>
+          
+          <video controls preload="metadata">
+            <source src="146633-789534286_small.mp4" type="video/mp4">
+            이 브라우저는 비디오 요소를 지원하지 않습니다.
+          </video>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div id="visited-pages-box" style="max-width:960px; margin: 40px auto; padding: 20px; background-color: #ede7f6; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  <h3 style="color: #5e35b1; text-align:center;">방문한 페이지</h3>
+  <ul id="visited-pages-list" style="list-style: none; padding: 0; text-align: center;"></ul>
+</div>
+
+<footer>
+  <p>© 2025 웹페이지</p>
+</footer>
+
+<script>
+  const images = ["학교구름.jpg", "꽃.jpg"];
+  let current = 0;
+
+  function nextImage() {
+    current = (current + 1) % images.length;
+    document.getElementById("mainImage").src = images[current];
+  }
+
+  function search() {
+    const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+
+    const pages = {
+      "홈": "index.html",
+      "index": "index.html",
+      "home": "index.html",
+      "취미": "취미.html",
+      "hobby": "취미.html",
+      "추천도서": "추천도서.html",
+      "도서": "추천도서.html",
+      "책": "추천도서.html",
+      "관심": "관심이슈.html",
+      "이슈": "관심이슈.html",
+      "유럽": "이동.html",
+      "이동": "이동.html",
+      "contact": "contact.html",
+      "연락": "contact.html"
+    };
+
+    if (pages[keyword]) {
+      location.href = pages[keyword];
+    } else {
+      alert("해당 페이지를 찾을 수 없습니다.");
+    }
+  }
+</script>
+<script>
+  // nav 항목 정의: [이름, 파일명]
+  const navPages = [
+    ["홈", "index.html"],
+    ["취미", "취미.html"],
+    ["추천도서", "추천도서.html"],
+    ["관심이슈", "관심이슈.html"],
+    ["이동경로", "이동.html"],
+    ["Contact", "contact.html"]
+  ];
+
+  // 클릭 이벤트 연결
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function () {
+      const label = this.textContent.trim();
+      let visitedLabels = JSON.parse(localStorage.getItem("visitedLabels")) || [];
+
+      if (!visitedLabels.includes(label) && label !== "홈") {
+        visitedLabels.push(label);
+        localStorage.setItem("visitedLabels", JSON.stringify(visitedLabels));
+      }
+    });
+  });
+
+  // 방문한 페이지 목록 표시
+  const visitedList = document.getElementById("visited-pages-list");
+  const visitedLabels = JSON.parse(localStorage.getItem("visitedLabels")) || [];
+
+  visitedLabels.forEach(label => {
+    const page = navPages.find(([name]) => name === label);
+    if (page) {
+      const [_, file] = page;
+
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+
+      link.href = file;
+      link.textContent = label;
+      link.style.display = "inline-block";
+      link.style.margin = "6px";
+      link.style.padding = "10px 16px";
+      link.style.backgroundColor = "#d1c4e9";
+      link.style.borderRadius = "20px";
+      link.style.color = "#5e35b1";
+      link.style.fontWeight = "bold";
+      link.style.textDecoration = "none";
+      link.style.boxShadow = "0 2px 6px rgba(0, 0, 0, 0.1)";
+      link.style.transition = "0.3s";
+
+      link.onmouseover = () => { link.style.backgroundColor = "#b39ddb"; };
+      link.onmouseout = () => { link.style.backgroundColor = "#d1c4e9"; };
+
+      li.appendChild(link);
+      visitedList.appendChild(li);
+    }
+  });
+</script>
+
+
+</body>
+</html>

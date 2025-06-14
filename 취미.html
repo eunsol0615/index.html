@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>취미</title>
+  <style>
+    @font-face {
+      font-family: 'Pretendard-Regular';
+      src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+    body {
+      margin: 0;
+      font-family: 'Pretendard-Regular';
+      background-color: #f8f8f8;
+    }
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #7e57c2;
+      margin-bottom: 30px;
+    }
+    .hobby-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .hobby {
+      width: 180px;
+      height: 240px;
+      background-color: #ede7f6;
+      border: 2px solid #b39ddb;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      color: black;
+    }
+    .hobby:hover {
+      background-color: rgb(210, 184, 251);
+    }
+    .hobby img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+    @media (max-width: 768px) {
+      .hobby {
+        width: 45%;
+      }
+    }
+    @media (max-width: 480px) {
+      .hobby {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><img src="취미.png" alt="취미" style="width:30px; vertical-align: middle;"> 취미</h1>
+    <div class="hobby-list">
+      <a href="코미디(수정).html" class="hobby">
+        <img src="코미디.jpg" alt="코미디 이미지">
+        코미디
+      </a>
+      <a href="여행.html" class="hobby">
+        <img src="여행이미지.jpg" alt="여행 이미지">
+        여행
+      </a>
+      <div class="hobby">
+        <img src="달리기.jpg" alt="음악 이미지">
+        운동
+      </div>
+    </div>
+  </div>
+</body>
+</html>

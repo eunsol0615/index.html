@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>코미디 취향</title>
+  <style>
+    @font-face {
+      font-family: 'Pretendard-Regular';
+      src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    }
+
+    body {
+      font-family: 'Pretendard-Regular', sans-serif;
+      background-color: #f3f0f9;
+      color: #333;
+      margin: 0;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #7e57c2;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background-color: #d1c4e9;
+      margin: 30px 0;
+    }
+
+    select, input[type=text], input[type=date], textarea {
+      padding: 10px;
+      border: 2px solid #9575cd;
+      border-radius: 10px;
+      font-size: 1rem;
+      margin: 8px 0;
+      width: 250px;
+      max-width: 90%;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    select:hover, input[type=text]:hover, input[type=date]:hover, textarea:hover {
+      background-color: #ede7f6;
+    }
+
+    input[type=text]:focus, textarea:focus {
+      outline: none;
+      background-color: #f3e5f5;
+      font-size: 1.05rem;
+    }
+
+    input[type=radio], input[type=checkbox] {
+      margin: 10px;
+      accent-color: #7e57c2;
+    }
+
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    .form-section {
+      margin-bottom: 30px;
+    }
+    .submit-button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #7e57c2;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #5e35b1;
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+  <h1>코미디 취향</h1>
+  <h2>더 끌리는 선택지로 양식을 채워보세요</h2>
+  <hr>
+
+  <div class="form-section">
+    <p>코미디 프로그램 선택지</p>
+    <select name="comedy">
+      <option value="seinfeld">Seinfeld</option>
+      <option value="the office">The Office</option>
+      <option value="friends">Friends</option>
+      <option value="30 rock">30 Rock</option>
+    </select>
+  </div>
+
+  <hr>
+
+  <div class="form-section">
+    <p>Type:</p>
+    <label><input type="radio" name="type" value="풍자 코미디"> 풍자 코미디</label><br>
+    <label><input type="radio" name="type" value="일상 코미디"> 일상 코미디</label><br>
+    <label><input type="radio" name="type" value="과학 코미디"> 과학 코미디</label>
+  </div>
+
+  <hr>
+
+  <div class="form-section">
+    <p>좋아하는 코미디언:</p>
+    <label><input type="checkbox" name="comedian" value="티나 페이"> 티나 페이</label><br>
+    <label><input type="checkbox" name="comedian" value="코난 오브라이언"> 코난 오브라이언</label><br>
+    <label><input type="checkbox" name="comedian" value="밥 오든커크"> 밥 오든커크</label>
+  </div>
+
+  <hr>
+
+  <div class="form-section">
+    <p>이름:</p>
+    <input type="text" name="name">
+    <p>주소:</p>
+    <input type="text" name="address">
+    <p>도시:</p>
+    <input type="text" name="city">
+  </div>
+
+  <div class="form-section">
+    <p>작성 일자:</p>
+    <input type="date" name="date">
+  </div>
+
+  <div class="form-section">
+    <p>추가로 하고 싶은 말:</p>
+    <textarea name="comments"></textarea>
+  </div>
+
+  <hr>
+  <div class="form-section">
+  <button type="submit" class="submit-button">제출하기</button>
+</div>
+
+</body>
+</html>

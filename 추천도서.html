@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>추천 도서</title>
+  <style>
+    @font-face {
+      font-family: 'Pretendard-Regular';
+      src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+    body {
+      margin: 0;
+      font-family: 'Pretendard-Regular';
+      background-color: #f8f8f8;
+    }
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #7e57c2;
+      margin-bottom: 30px;
+    }
+    .hobby-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .hobby {
+      width: 180px;
+      height: 320px;
+      background-color: #ede7f6;
+      border: 2px solid #b39ddb;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      color: black;
+      overflow: hidden;
+    }
+    .hobby:hover {
+      background-color: rgb(210, 184, 251);
+    }
+    .hobby img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+    .hobby-list .hobby span {
+      padding: 10px;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .hobby {
+        width: 45%;
+      }
+    }
+    @media (max-width: 480px) {
+      .hobby {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><img src="책.png" alt="책" style="width:30px; vertical-align: middle;"> 추천 도서</h1>
+    <div class="hobby-list">
+      <div class="hobby">
+        <img src="삶.jpg" alt="삶의 한가운데">
+        <span>삶의 한가운데</span>
+      </div>
+      
+      <div class="hobby">
+        <img src="황야.jpg" alt="황야의 이리">
+        <span>황야의 이리</span>
+      </div>
+      
+      <div class="hobby">
+        <img src="그리드.jpg" alt="그리드">
+        <span>그리드</span>
+      </div>
+      <div class="hobby">
+        <img src="머스크.jpg" alt="일론 머스크">
+        <span>일론 머스크</span>
+      </div>
+      <div class="hobby">
+        <img src="카네키.jpg" alt="카네키">
+        <span>카네기 자서전</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
